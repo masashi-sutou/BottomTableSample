@@ -47,7 +47,7 @@ extension UIViewController {
             view.addSubview(bottomFixedView, constraints: [
                 bottomFixedView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
                 bottomFixedView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-                bottomFixedView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -tabBarHeight),
+                bottomFixedView.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor),
                 bottomFixedView.heightAnchor.constraint(equalToConstant: fixedHeight)
                 ])
         }
