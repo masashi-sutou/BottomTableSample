@@ -14,7 +14,7 @@ final class TextViewCell: UITableViewCell, UITextViewDelegate {
     private let placeholderLabel: UILabel = UILabel()
     private let textChanged: (String) -> Void
     private let tappedNext: () -> Void
-    static var preferredHeight: CGFloat {
+    private var preferredHeight: CGFloat {
         let screenHeight: CGFloat = UIScreen.main.bounds.height
         if screenHeight == 480 {
             return 100
@@ -56,7 +56,7 @@ final class TextViewCell: UITableViewCell, UITextViewDelegate {
             textView.leadingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.leadingAnchor),
             textView.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
             textView.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor),
-            textView.heightAnchor.constraint(greaterThanOrEqualToConstant: type(of: self).preferredHeight).priority(999)
+            textView.heightAnchor.constraint(greaterThanOrEqualToConstant: preferredHeight).priority(999)
             ])
         
         setupInputAccessoryView()
