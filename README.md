@@ -6,7 +6,7 @@ BottomTableSample is a sample application that displays BottomFixedView with Con
   <img src="/readme_image.jpeg" />
 </p>
 
-# slide
+# Slide
 
 Sorry, this slide in Japanese.
 
